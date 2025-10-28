@@ -4,12 +4,19 @@ import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const unstable_settings = {
   anchor: '(tabs)',
 };
 
 export default function RootLayout() {
+  const storage = AsyncStorage;
+
+  // useEffect(() => {
+  //   storage.removeItem('access_token');
+  // }, []);
+
   const colorScheme = useColorScheme();
 
   return (
