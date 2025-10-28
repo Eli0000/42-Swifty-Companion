@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { ISearchResult } from '@/lib/types';
+import { ISearchResult } from '@//lib/types';
 import React, { useState } from 'react';
 import Toast from 'react-native-toast-message';
 import LoginResult from '../views/LoginResult';

@@ -1,8 +1,8 @@
-import { ThemedText } from '@/components/themed-text';
-import { ThemedButton } from '@/components/ThemedButton';
-import { Fonts } from '@/constants/theme';
-import { fetchAPI } from '@/lib/api';
-import { ISearchResult } from '@/lib/types';
+import { ThemedText } from '@//components/themed-text';
+import { ThemedButton } from '@//components/ThemedButton';
+import { Fonts } from '@//constants/theme';
+import { fetchAPI } from '@//lib/api';
+import { ISearchResult } from '@//lib/types';
 import { Dispatch, SetStateAction, useState } from 'react';
 import { ActivityIndicator, ImageBackground, Keyboard, StyleSheet, TextInput } from 'react-native';
 
