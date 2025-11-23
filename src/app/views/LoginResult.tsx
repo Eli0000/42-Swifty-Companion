@@ -5,7 +5,7 @@ import { Fonts } from '@/constants/theme';
 import { IPoject, ISearchResult, ISkill, IUser } from '@/lib/types';
 import { Image } from 'expo-image';
 import { Dispatch, JSX, SetStateAction, useState } from 'react';
-import { Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { Button, StyleSheet, TouchableOpacity, View } from 'react-native';
 import * as Progress from 'react-native-progress';
 
 const UserTab = ({ user }: { user: IUser }) => {
@@ -47,12 +47,11 @@ const SkillsTab = ({ skills }: { skills: ISkill[] }) => {
       {skills.map((skill) => (
         <ThemedView key={'skill' + skill.name} style={{ ...styles.info, flexDirection: 'column' }}>
           <ThemedText>{skill.name}</ThemedText>
-
           <Progress.Circle
             size={90}
             progress={skill.level / 30}
             showsText={true}
-            formatText={(_) => skill.level}
+            formatText={(_) =>{return (<View style={{alignItems : 'center'}}><ThemedText>{skill.level}</ThemedText><ThemedText>{`${(skill.level /30*100).toPrecision(3)}%`}</ThemedText></View>)}}
           />
         </ThemedView>
       ))}
